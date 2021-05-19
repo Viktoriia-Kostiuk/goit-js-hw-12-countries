@@ -1,0 +1,19 @@
+
+<h2 class="header">{{this.name}}</h2>
+<div class="container">
+<div class="text-container">
+    <p><span >Capital: </span>{{this.capital}}</p>
+    <p><span>Population: </span> {{this.population}}</p>
+    <ul>
+        <span>Languages</span>
+        {{#each this.languages}}
+        <li>{{this.name}}</li>
+        {{/each}}
+    </ul>
+</div>
+
+<img src={{this.flag}} alt="Flag of {{this.name}}" width="500">
+
+
+</div>
+
