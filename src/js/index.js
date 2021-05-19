@@ -27,11 +27,15 @@ refs.inputEl.addEventListener(
 );
 
 
-const makeSearch= ()=> {
+const makeSearch = () => {
     searchCountry = refs.inputEl.value;
     console.log(searchCountry);
-    fetch.fetchCountries(searchCountry).then(testNumberOfCountries).catch(onError);
+ 
+    if (searchCountry!=0) {
+        fetch.fetchCountries(searchCountry).then(testNumberOfCountries).catch(onError);
+    }
 }
+    
 
 function testNumberOfCountries(countries) {
     
@@ -63,7 +67,6 @@ function renderCountryCard(countries) {
     const countryCard = countryTemplate(countries);
      refs.cardContainer.innerHTML=countryCard;
     console.log('renderCountryCard');
-    refs.inputEl.value = '';
  }
 
 function renderCountriesList(countries) {
