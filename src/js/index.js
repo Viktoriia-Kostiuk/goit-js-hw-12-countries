@@ -17,7 +17,7 @@ const refs = {
     listContainer:document.querySelector('.js-list-container')
 }
   
-let searchCountry;
+let searchCountry='';
 
 refs.inputEl.addEventListener(
     'input',
@@ -74,7 +74,6 @@ function renderCountriesList(countries) {
     
  }
 
-
 const onError = (error) => {
     clearCard();
     console.log(error);
@@ -84,7 +83,3 @@ const clearCard = () => {
     refs.cardContainer.innerHTML = '';
     refs.listContainer.innerHTML = '';
 }
-
-    
-
-
