@@ -23,7 +23,7 @@ refs.inputEl.addEventListener(
     'input',
     debounce(() => {
         makeSearch();
-    }, 1000),
+    }, 500),
 );
 
 
